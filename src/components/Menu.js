@@ -2,6 +2,7 @@ import React from 'react';
 import recipes from '../recipes';
 
 export default function Menu() {
+    const handleOrder = 
   return (
     <div className='menu-container'>
         <div className='menu-header'>
