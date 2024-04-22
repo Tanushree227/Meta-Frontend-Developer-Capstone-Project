@@ -1,8 +1,25 @@
 import React from 'react';
 import recipes from '../recipes';
+import Swal from 'sweetalert2';
 
 export default function Menu() {
-    const handleOrder = 
+    const handleOrder = (id) => {
+        console.log(id, 'id is clicked...');
+        Swal.fire({
+            title: "Do you want to order this?",
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: "Yes order it",
+            denyButtonText: `Cancel`
+          }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+              Swal.fire("Ordered!", "Your order has been processing", "success");
+            } else if (result.isDenied) {
+              Swal.fire("Ordered Cancel", "", "info");
+            }
+          });
+    }
   return (
     <div className='menu-container'>
         <div className='menu-header'>
@@ -20,7 +37,7 @@ export default function Menu() {
                             <p>{recipe.price}</p>
                         </div>
                         <p>{recipe.description}</p>
-                        <button className='orderBtn'>Order Now</button>
+                        <button className='orderBtn' onClick={() => handleOrder(recipe.id)}>Order Now</button>
                     </div>
                 </div>)
             }
