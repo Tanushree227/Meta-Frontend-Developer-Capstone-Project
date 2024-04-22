@@ -30,11 +30,11 @@ export default function Footer() {
             <div>
                 <h3>Social Media Links</h3>
                 <ul>
-                    <li><a href='/instagram'>Instagram</a></li>
-                    <li><a href='/facebook'>Facebook</a></li>
-                    <li><a href='/twitter'>Twitter</a></li>
-                    <li><a href='/linkedin'>LinkedIn</a></li>
-                    <li><a href='/threads'>Threads</a></li>
+                    <li><a href='https://www.instagram.com'>Instagram</a></li>
+                    <li><a href='https://www.facebook.com/'>Facebook</a></li>
+                    <li><a href='https://twitter.com/'>Threads</a></li>
+                    <li><a href='https://www.linkedin.com/'>LinkedIn</a></li>
+                    <li><a href='https://in.pinterest.com/'>Pinterest</a></li>
                 </ul>
             </div>
         </section>
